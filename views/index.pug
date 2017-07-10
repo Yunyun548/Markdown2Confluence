@@ -1,0 +1,26 @@
+extends layout
+
+block content
+    .jumbotron
+        h1 
+            img(src='/images/markdown-logo.png')
+            span #{title}
+        p.lead Free online tool to format amazing Markdown code into ugly Confluence Wiki Compatible text, making it readable and pretty, with the proper indentation.
+    form#convert-form(method="post")
+        #input.row
+            .form-group
+                label(for='markdown') Markdown:
+                textarea#markdown.form-control(type='textarea', placeholder='Paste your markdown code here' name='markdown', rows=20) #{markdown}
+            .form-group
+                button#markdown-clear.btn.btn-danger Clear
+                button.btn.btn-primary(type='submit') Convert !
+    #output.row
+        .form-group
+            label(for='confluence') Confluence:
+            textarea.form-control(name='confluence', rows=20) #{confluenceCode}
+                
+block javascript
+    script.
+        $('#markdown-clear').on('click', function() {
+            $('#markdown').val('');
+        })
