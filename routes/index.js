@@ -6,7 +6,7 @@ var router = express.Router();
 router.get('/', function(req, res, next) {
 
     res.render('index', {
-        title: 'Markdown To Confluence',
+        title: 'To Confluence',
     });
 });
 
@@ -16,7 +16,7 @@ router.post('/', function(req, res, next) {
     confluenceCode = converter.markdown2confluence(markdown);
 
     res.render('index', {
-        title: 'Markdown To Confluence',
+        title: 'To Confluence',
         markdown: markdown,
         confluenceCode: confluenceCode
     });
