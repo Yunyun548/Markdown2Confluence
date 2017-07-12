@@ -1,7 +1,9 @@
 # Markdown2Confluence
 Web page converting Markdown into Confluence wiki format
 
-Visit markdown2confluence.org
+Visit [markdown2confluence.xyz](http://markdown2confluence.xyz)
+
+![Demo MArkdown to Confluence](http://i.imgur.com/qoBqlIJ.png)
 
 ## License
 
